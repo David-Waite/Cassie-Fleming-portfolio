@@ -6,7 +6,7 @@ import styles from "../../styles/animation.module.css";
 
 const client = createClient({
   space: "agrr167dqftk",
-  accessToken: "r-SKWotZM_Nv94yNppkmnrXd0FFgxFfvaHk3HOXMd5o",
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
 export const getStaticPaths = async () => {

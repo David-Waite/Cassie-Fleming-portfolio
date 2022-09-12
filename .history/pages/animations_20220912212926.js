@@ -5,7 +5,7 @@ import BookPreview from "../components/BookPreview";
 export async function getStaticProps() {
   const client = createClient({
     space: "agrr167dqftk",
-    accessToken: "r-SKWotZM_Nv94yNppkmnrXd0FFgxFfvaHk3HOXMd5o",
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
   const res = await client.getEntries({ content_type: "animation" });

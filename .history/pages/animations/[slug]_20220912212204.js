@@ -5,8 +5,8 @@ import Image from "next/image";
 import styles from "../../styles/animation.module.css";
 
 const client = createClient({
-  space: "agrr167dqftk",
-  accessToken: "r-SKWotZM_Nv94yNppkmnrXd0FFgxFfvaHk3HOXMd5o",
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
 export const getStaticPaths = async () => {
