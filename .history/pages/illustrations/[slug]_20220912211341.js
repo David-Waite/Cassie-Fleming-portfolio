@@ -1,8 +1,10 @@
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+
 import Image from "next/image";
-import styles from "../../styles/animation.module.css";
+import styles from "../../styles/Illustration.module.css";
+
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -11,7 +13,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
   });
 
   const paths = res.items.map((item) => {
@@ -28,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
     "fields.slug": params.slug,
   });
 
@@ -42,19 +44,26 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { animations: items[0] },
+    props: { illustrations: items[0] },
     revalidate: 300,
   };
 };
+
+
+
+
+
+// Create a bespoke renderOptions object to target BLOCKS.EMBEDDED_ENTRY (linked block entries e.g. code blocks)
+// INLINES.EMBEDDED_ENTRY (linked inline entries e.g. a reference to another blog post)
+// and BLOCKS.EMBEDDED_ASSET (linked assets e.g. images)
+
 const renderOptions = {
   renderNode: {
     [INLINES.EMBEDDED_ENTRY]: (node, children) => {
       // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "blogPost") {
         return (
-          <a href={`/blog/${node.data.target.fields.slug}`}>
-            {" "}
-            {node.data.target.fields.title}
+          <a href={`/blog/${node.data.target.fields.slug}`}>            {node.data.target.fields.title}
           </a>
         );
       }
@@ -97,37 +106,30 @@ const renderOptions = {
     },
   },
 };
-export default function animation({ animations }) {
-  let video;
-  if (animations.fields.url) {
-    video = (
-      <div className={styles.videoResponsive}>
-        <iframe
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/watch?v=L3fuZvIb1r8`}
-          frameBorder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Embedded youtube"
-        />
-      </div>
-    );
-  } else {
-    const src = `https:${animations.fields.gif.fields.file.url}`;
-    const width = animations.fields.gif.fields.file.details.image.width;
-    const height = animations.fields.gif.fields.file.details.image.height;
-    const title = animations.fields.title;
-    video = <Image src={src} height={height} width={width} alt={title} />;
-  }
+
+export default function BlogPost(props) {
+  const { post } = props;
+
+  return (
+    <>
+       {documentToReactComponents(post.fields.body, renderOptions)}
+    </>
+  );
+}
+
+export default function illustration({ illustrations }) {
+  const url = illustrations.fields.illustration.fields.file.url;
+  const width =
+    illustrations.fields.illustration.fields.file.details.image.width;
+  const height =
+    illustrations.fields.illustration.fields.file.details.image.height;
 
   return (
     <div className={styles.layout}>
-      <div className={styles.image}>{video}</div>
-
+      <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(
-          animations.fields.description,
+          illustrations.fields.description,
           renderOptions
         )}
       </div>

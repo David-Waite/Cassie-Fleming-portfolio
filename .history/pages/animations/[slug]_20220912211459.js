@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 import styles from "../../styles/animation.module.css";
 
