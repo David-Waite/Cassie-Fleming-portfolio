@@ -43,7 +43,6 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: { animations: items[0] },
-    revalidate: 300,
   };
 };
 
