@@ -1,0 +1,16 @@
+.layout {
+  position: relative;
+  display: flex;
+
+  flex-flow: column wrap;
+
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

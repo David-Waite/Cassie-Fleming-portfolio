@@ -1,0 +1,9 @@
+.layout {
+  max-width: 1000px;
+  margin: 0;
+}
+.photos {
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 1250px;
+}

@@ -1,0 +1,22 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: calc(500px + 1.5625vw);
+  margin-right: calc(500px + 1.5625vw);
+
+  gap: 40px;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.photo {
+  border-radius: 25px;
+}
+.aboutText {
+  text-align: start;
+}

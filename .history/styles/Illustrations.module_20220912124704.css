@@ -1,0 +1,49 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal {
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: calc(-207px + 5vh);
+  background-color: white;
+  width: 1200px;
+  left: 25px;
+}
+
+.modalImage {
+  width: 740px;
+}
+.text {
+  text-align: left;
+  position: absolute;
+  width: 400px;
+  left: 780px;
+}
+.description {
+  padding: 0;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

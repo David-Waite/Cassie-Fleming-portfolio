@@ -1,0 +1,38 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+/*const illustrationsElements = illustrations.map(
+    illustrations[0].map((illustration) => (
+      <BookPreview
+        key={illustration.fields.illustration.sys.id}
+        url={illustration.fields.illustration.fields.file.url}
+        width={illustration.fields.illustration.fields.file.details.image.width}
+        height={
+          illustration.fields.illustration.fields.file.details.image.height
+        }
+      />
+    ))
+  );

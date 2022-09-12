@@ -1,0 +1,15 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 15vw;
+  gap: 40px;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.photo {
+  border-radius: 25px;
+}

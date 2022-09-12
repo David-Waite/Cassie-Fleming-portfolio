@@ -1,0 +1,40 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+}
+
+.aboutText {
+  max-width: 600px;
+  min-width: 350px;
+  text-align: start;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  gap: 100px;
+}
+
+.photoContainerLeft {
+  margin-left: auto;
+}
+.photo {
+  border-radius: 25px;
+}
+.profile {
+  display: none;
+}
+@media (max-width: 810px) {
+  .layout {
+    display: inline;
+  }
+  .photo {
+    display: none;
+  }
+  .photoContainerLeft {
+    margin: 0 auto 20px;
+  }
+}

@@ -1,0 +1,9 @@
+.layout {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photos {
+  max-width: 600px;
+}

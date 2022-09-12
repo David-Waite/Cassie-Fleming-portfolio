@@ -1,0 +1,19 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 40px;
+}
+
+.aboutText {
+  min-height: 500px;
+}
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.photo {
+  border-radius: 25px;
+}

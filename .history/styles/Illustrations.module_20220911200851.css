@@ -1,0 +1,56 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab {
+  grid-column: -4/-2;
+}
+
+.text {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#open-modal,
+#close-modal {
+  background-color: royalblue;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#modal {
+  background-color: orange;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  top: 30%;
+  padding: 20px;
+  height: 200px;
+}
+#overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 50%);
+}

@@ -1,0 +1,20 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  position: relative;
+  min-width: 300px;
+  max-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab {
+  grid-column: -4/-2;
+}

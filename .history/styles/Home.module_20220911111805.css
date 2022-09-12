@@ -1,0 +1,11 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 400px;
+  margin-right: 400px;
+  gap: 40px;
+}
+.photo {
+  border-radius: 25px;
+  width: 200px;
+}

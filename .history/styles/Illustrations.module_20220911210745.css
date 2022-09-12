@@ -1,0 +1,27 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab {
+  grid-column: -4/-2;
+}
+
+.model {
+  position: absolute;
+  left: calc(1250px - 1000px / 2);
+  z-index: 1;
+  height: 20vh;
+  background-color: white;
+  width: 1000px;
+}

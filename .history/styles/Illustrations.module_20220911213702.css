@@ -1,0 +1,53 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab {
+  grid-column: -4/-2;
+}
+
+.model {
+  position: absolute;
+  top: calc(-208px + 5vh);
+  left: calc(((1250px - 1000px) / 2));
+  z-index: 1;
+  height: calc(90vh);
+  background-color: white;
+  width: 1000px;
+}
+.exit {
+  position: relative;
+}
+.line1,
+.line2 {
+  z-index: 1;
+  width: 20px;
+  height: 3px;
+  background-color: green;
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.line1 {
+  transform: translate(0, 7px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+..bar3 {
+  transform: translate(0, -7px) rotate(45deg);
+}

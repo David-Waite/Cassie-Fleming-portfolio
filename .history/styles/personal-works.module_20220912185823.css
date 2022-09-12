@@ -1,0 +1,20 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: -208px;
+  color: green;
+}

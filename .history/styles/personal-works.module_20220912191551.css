@@ -1,0 +1,39 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  background-color: grey;
+  top: -30px;
+  left: -30px;
+  height: 100vh;
+  width: calc(100vw - 17px);
+  color: green;
+}
+
+.overlayContainer {
+  width: calc(100vw - 17px);
+  background-color: green;
+  display: flex;
+}
+
+.text {
+  z-index: 3;
+  color: blue;
+}
+.imageContainer {
+  max-width: calc(50vw - 17px);
+}

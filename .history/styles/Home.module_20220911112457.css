@@ -1,0 +1,12 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 40px;
+}
+
+.photoContainer {
+}
+.photo {
+  border-radius: 25px;
+}

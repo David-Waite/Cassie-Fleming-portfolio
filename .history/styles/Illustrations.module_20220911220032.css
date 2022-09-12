@@ -1,0 +1,48 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab {
+  grid-column: -4/-2;
+}
+
+.modalContainer {
+  position: absolute;
+  width: 100%;
+}
+.model {
+  position: absolute;
+
+  z-index: 1;
+  height: auto;
+  background-color: white;
+  width: 1000px;
+  margin: 0 auto;
+}
+.exit {
+  position: relative;
+}
+
+.image {
+  margin: 50px;
+  width: 600px;
+}
+
+.text {
+  text-align: left;
+  position: absolute;
+  width: 250px;
+  top: 50px;
+  right: 50px;
+}
