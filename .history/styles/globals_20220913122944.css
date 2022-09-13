@@ -34,6 +34,9 @@ a {
   text-decoration: none;
   color: black;
 }
+.hover {
+  color: red;
+}
 
 .active {
   color: black;
@@ -114,21 +117,7 @@ footer {
   position: relative;
   font-size: 20px;
   color: black;
-  z-index: 1;
-}
-.undefinedemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: 1;
-}
-.changeemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: -1;
+  z-index: 2;
 }
 .email-popup {
   transition: 0.5s;
@@ -214,7 +203,7 @@ footer {
     top: 50px;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 0px;
     transition: 0.5s;
     z-index: 1;
@@ -232,12 +221,8 @@ footer {
     height: 100vh;
     width: calc(100vw - 20px);
   }
-
-  .link:hover {
+  a:hover {
     background-color: #c4c3c3;
-  }
-  .linkHidden:hover {
-    background-color: white;
   }
 
   .navbar-line {
@@ -246,13 +231,12 @@ footer {
   }
 
   .currentPageCon {
+    position: relative;
     text-align: start;
-    margin-bottom: 20px;
     width: calc(100vw - 20px);
   }
   .currentPage {
     display: inline;
-    padding: 0 0 0 20px;
 
     font-weight: 400;
     color: #727272;

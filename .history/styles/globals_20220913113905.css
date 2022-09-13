@@ -34,6 +34,9 @@ a {
   text-decoration: none;
   color: black;
 }
+.hover {
+  color: red;
+}
 
 .active {
   color: black;
@@ -114,21 +117,7 @@ footer {
   position: relative;
   font-size: 20px;
   color: black;
-  z-index: 1;
-}
-.undefinedemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: 1;
-}
-.changeemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: -1;
+  z-index: 2;
 }
 .email-popup {
   transition: 0.5s;
@@ -138,9 +127,9 @@ footer {
   font-weight: 400;
   width: 63px;
   right: calc(50vw - 51px);
-  top: 48px;
-  background-color: transparent;
-  color: transparent;
+  top: 48.5px;
+  background-color: blue;
+  color: white;
   border-radius: 5px;
   z-index: 1;
 }
@@ -150,15 +139,14 @@ footer {
 
   content: "";
   z-index: 2;
-  top: 10px;
-  left: 28px;
+  top: 11px;
+  left: 50%x;
   color: transparent;
   transition: 0s;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid transparent;
+  border-top: 4px solid blue;
   z-index: 0;
-  transition: 0.5s;
 }
 .copied {
   transition: 0.5s;
@@ -168,7 +156,7 @@ footer {
   font-weight: 400;
   width: 63px;
   right: calc(50vw - 51px);
-  top: 33.5px;
+  top: 42.5px;
   padding: 0 0 2px 0;
   background-color: blue;
   color: #ffffff;
@@ -180,8 +168,7 @@ footer {
   position: absolute;
   content: "";
   z-index: 2;
-  top: 12px;
-  left: 28px;
+  top: 13px;
   color: transparent;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -198,9 +185,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100vw - 20px);
+    width: 100vw;
   }
-
   .navbar-icon {
     display: inline-block;
   }
@@ -214,7 +200,7 @@ footer {
     top: 50px;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 0px;
     transition: 0.5s;
     z-index: 1;
@@ -230,33 +216,25 @@ footer {
   }
   .change nav {
     height: 100vh;
-    width: calc(100vw - 20px);
   }
-
-  .link:hover {
+  a:hover {
     background-color: #c4c3c3;
-  }
-  .linkHidden:hover {
-    background-color: white;
   }
 
   .navbar-line {
-    width: calc(100vw - 20px);
+    width: 100vw;
     margin-bottom: 10px;
   }
 
-  .currentPageCon {
-    text-align: start;
-    margin-bottom: 20px;
-    width: calc(100vw - 20px);
-  }
   .currentPage {
     display: inline;
-    padding: 0 0 0 20px;
-
+    margin: 10px 0 20px;
+    padding-left: 20px;
     font-weight: 400;
     color: #727272;
     font-size: 16px;
+    text-align: left;
+    width: 100vw;
   }
   .change .layout {
     margin-top: 20px;

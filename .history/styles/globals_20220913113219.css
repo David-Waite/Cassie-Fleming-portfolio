@@ -34,6 +34,9 @@ a {
   text-decoration: none;
   color: black;
 }
+.hover {
+  color: red;
+}
 
 .active {
   color: black;
@@ -114,21 +117,7 @@ footer {
   position: relative;
   font-size: 20px;
   color: black;
-  z-index: 1;
-}
-.undefinedemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: 1;
-}
-.changeemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: -1;
+  z-index: 2;
 }
 .email-popup {
   transition: 0.5s;
@@ -137,8 +126,8 @@ footer {
   font-size: 8px;
   font-weight: 400;
   width: 63px;
-  right: calc(50vw - 51px);
-  top: 48px;
+  left: 400px;
+  top: 48.5px;
   background-color: transparent;
   color: transparent;
   border-radius: 5px;
@@ -147,10 +136,9 @@ footer {
 
 .email-popup::after {
   position: absolute;
-
   content: "";
   z-index: 2;
-  top: 10px;
+  top: 11px;
   left: 28px;
   color: transparent;
   transition: 0s;
@@ -158,7 +146,6 @@ footer {
   border-right: 4px solid transparent;
   border-top: 4px solid transparent;
   z-index: 0;
-  transition: 0.5s;
 }
 .copied {
   transition: 0.5s;
@@ -167,8 +154,8 @@ footer {
   font-size: 8px;
   font-weight: 400;
   width: 63px;
-  right: calc(50vw - 51px);
-  top: 33.5px;
+  left: 58px;
+  top: 42.5px;
   padding: 0 0 2px 0;
   background-color: blue;
   color: #ffffff;
@@ -180,7 +167,7 @@ footer {
   position: absolute;
   content: "";
   z-index: 2;
-  top: 12px;
+  top: 13px;
   left: 28px;
   color: transparent;
   border-left: 4px solid transparent;
@@ -198,9 +185,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100vw - 20px);
+    width: 100vw;
   }
-
   .navbar-icon {
     display: inline-block;
   }
@@ -214,7 +200,7 @@ footer {
     top: 50px;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 0px;
     transition: 0.5s;
     z-index: 1;
@@ -230,33 +216,25 @@ footer {
   }
   .change nav {
     height: 100vh;
-    width: calc(100vw - 20px);
   }
-
-  .link:hover {
+  a:hover {
     background-color: #c4c3c3;
-  }
-  .linkHidden:hover {
-    background-color: white;
   }
 
   .navbar-line {
-    width: calc(100vw - 20px);
+    width: 100vw;
     margin-bottom: 10px;
   }
 
-  .currentPageCon {
-    text-align: start;
-    margin-bottom: 20px;
-    width: calc(100vw - 20px);
-  }
   .currentPage {
     display: inline;
-    padding: 0 0 0 20px;
-
+    margin: 10px 0 20px;
+    padding-left: 20px;
     font-weight: 400;
     color: #727272;
     font-size: 16px;
+    text-align: left;
+    width: 100vw;
   }
   .change .layout {
     margin-top: 20px;

@@ -17,11 +17,11 @@ export default function Layout({ children }) {
       return navClass.navClass === "change"
         ? {
             navClass: "",
-            linkClass: "linkHidden",
+            linkClass: "link",
           }
         : {
             navClass: "change",
-            linkClass: "link",
+            linkClass: "linkHidden",
           };
     });
   }
@@ -137,7 +137,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
           </span>
-          <div className={`${navClass.navClass}email`} onClick={copyEmail}>
+          <div className="email" onClick={copyEmail}>
             <EnvelopeFill />
           </div>
           <span>

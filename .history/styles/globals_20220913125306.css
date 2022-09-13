@@ -114,21 +114,14 @@ footer {
   position: relative;
   font-size: 20px;
   color: black;
-  z-index: 1;
-}
-.undefinedemail {
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  color: black;
-  z-index: 1;
+  z-index: -1;
 }
 .changeemail {
   cursor: pointer;
   position: relative;
   font-size: 20px;
   color: black;
-  z-index: -1;
+  z-index: 1;
 }
 .email-popup {
   transition: 0.5s;
@@ -214,7 +207,7 @@ footer {
     top: 50px;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 0px;
     transition: 0.5s;
     z-index: 1;

@@ -6,7 +6,7 @@ import { Instagram, Linkedin, EnvelopeFill } from "react-bootstrap-icons";
 export default function Layout({ children }) {
   const [navClass, setNavClass] = useState({
     navClass: "",
-    linkClass: "link",
+    linkClass: "",
   });
   const [copiedEmail, setCopiedEmail] = useState("email-popup");
   const router = useRouter();
@@ -15,13 +15,10 @@ export default function Layout({ children }) {
   function toggleNav() {
     setNavClass((navClass) => {
       return navClass.navClass === "change"
-        ? {
-            navClass: "",
-            linkClass: "linkHidden",
-          }
+        ? ""
         : {
             navClass: "change",
-            linkClass: "link",
+            linkClass: "linkHidden",
           };
     });
   }
@@ -40,7 +37,7 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div className={`layout ${navClass.navClass}`}>
+    <div className={`layout ${navClass}`}>
       <header className="header">
         <h1>
           <Link href="/">
@@ -58,9 +55,7 @@ export default function Layout({ children }) {
           <Link href="/">
             <a
               onClick={newPage}
-              className={`${currentRoute === "/" ? "active" : ""} ${
-                navClass.linkClass
-              }`}
+              className={`${currentRoute === "/" ? "active" : ""} link`}
             >
               About
             </a>
@@ -68,9 +63,9 @@ export default function Layout({ children }) {
           <Link href="/animations">
             <a
               onClick={newPage}
-              className={`${currentRoute === "/animations" ? "active" : ""} ${
-                navClass.linkClass
-              }`}
+              className={`${
+                currentRoute === "/animations" ? "active" : ""
+              } link`}
             >
               Animations
             </a>
@@ -80,7 +75,7 @@ export default function Layout({ children }) {
               onClick={newPage}
               className={`${
                 currentRoute === "/illustrations" ? "active" : ""
-              } ${navClass.linkClass}`}
+              } link`}
             >
               Illustrations
             </a>
@@ -90,7 +85,7 @@ export default function Layout({ children }) {
               onClick={newPage}
               className={`${
                 currentRoute === "/personalWorks" ? "active" : ""
-              } ${navClass.linkClass}`}
+              } link`}
             >
               Personal works
             </a>
@@ -98,9 +93,7 @@ export default function Layout({ children }) {
           <Link href="/showreel">
             <a
               onClick={newPage}
-              className={`${currentRoute === "/showreel" ? "active" : ""} ${
-                navClass.linkClass
-              }`}
+              className={`${currentRoute === "/showreel" ? "active" : ""} link`}
             >
               Showreel
             </a>
@@ -137,7 +130,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
           </span>
-          <div className={`${navClass.navClass}email`} onClick={copyEmail}>
+          <div className="email" onClick={copyEmail}>
             <EnvelopeFill />
           </div>
           <span>

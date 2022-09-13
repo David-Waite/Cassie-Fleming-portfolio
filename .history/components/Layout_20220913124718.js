@@ -16,8 +16,8 @@ export default function Layout({ children }) {
     setNavClass((navClass) => {
       return navClass.navClass === "change"
         ? {
-            navClass: "",
-            linkClass: "linkHidden",
+            navClass: " ",
+            linkClass: "link",
           }
         : {
             navClass: "change",
@@ -137,7 +137,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
           </span>
-          <div className={`${navClass.navClass}email`} onClick={copyEmail}>
+          <div className="email" onClick={copyEmail}>
             <EnvelopeFill />
           </div>
           <span>
