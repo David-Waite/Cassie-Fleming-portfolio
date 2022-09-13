@@ -2,9 +2,7 @@ import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
-import styles from "../../styles/animation.module.css";
-import Link from "next/link";
-import { ArrowLeft } from "react-bootstrap-icons";
+import styles from "../../styles/Illustration.module.css";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -13,7 +11,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
   });
 
   const paths = res.items.map((item) => {
@@ -30,7 +28,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
     "fields.slug": params.slug,
   });
 
@@ -44,7 +42,7 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { animations: items[0] },
+    props: { illustrations: items[0] },
     revalidate: 300,
   };
 };
@@ -66,44 +64,20 @@ const renderOptions = {
   },
 };
 
-export default function animation({ animations }) {
-  let video;
-  if (animations.fields.url) {
-    video = (
-      <div className={styles.videoResponsive}>
-        <iframe
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/watch?v=L3fuZvIb1r8`}
-          frameBorder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Embedded youtube"
-        />
-      </div>
-    );
-  } else {
-    const src = `https:${animations.fields.gif.fields.file.url}`;
-    const width = animations.fields.gif.fields.file.details.image.width;
-    const height = animations.fields.gif.fields.file.details.image.height;
-    const title = animations.fields.title;
-    video = <Image src={src} height={height} width={width} alt={title} />;
-  }
+export default function illustration({ illustrations }) {
+  const url = illustrations.fields.illustration.fields.file.url;
+  const width =
+    illustrations.fields.illustration.fields.file.details.image.width;
+  const height =
+    illustrations.fields.illustration.fields.file.details.image.height;
 
   return (
     <div className={styles.layout}>
-      <div className={styles.backLink}>
-        <Link href="/animations">
-          <a>
-            <ArrowLeft />
-          </a>
-        </Link>
-      </div>
-      <div className={styles.image}>{video}</div>
-
+      <h2>hi</h2>
+      <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(
-          animations.fields.description,
+          illustrations.fields.description,
           renderOptions
         )}
       </div>

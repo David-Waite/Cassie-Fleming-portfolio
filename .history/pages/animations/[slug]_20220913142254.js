@@ -3,8 +3,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 import styles from "../../styles/animation.module.css";
-import Link from "next/link";
-import { ArrowLeft } from "react-bootstrap-icons";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -93,7 +91,7 @@ export default function animation({ animations }) {
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>
-        <Link href="/animations">
+        <Link href="/illustrations">
           <a>
             <ArrowLeft />
           </a>

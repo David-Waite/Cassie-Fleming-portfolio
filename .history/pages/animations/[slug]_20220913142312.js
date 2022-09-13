@@ -93,7 +93,7 @@ export default function animation({ animations }) {
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>
-        <Link href="/animations">
+        <Link href="/illustrations">
           <a>
             <ArrowLeft />
           </a>

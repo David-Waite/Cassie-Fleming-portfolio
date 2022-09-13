@@ -7,13 +7,11 @@
   margin: 0 auto;
   max-width: 1250px;
 }
+
 .backLink {
-  display: none;
 }
-@media (max-width: 810px) {
-  .backLink {
-    display: block;
-    text-align: left;
-    margin: -41px 0 18px;
-  }
+
+.backLink h2 {
+  width: 100vw;
+  text-align: start;
 }
