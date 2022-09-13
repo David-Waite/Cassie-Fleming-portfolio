@@ -72,7 +72,7 @@ export default function animation({ animations }) {
     video = (
       <div>
         <iframe
-          src={`https://www.youtube.com/embed/s_t5Mxjd03o`}
+          src={`https://www.youtube.com/embed/v=DKQyP3Fj7fw&ab`}
           frameBorder="0"
           allowFullScreen
           title="Embedded youtube"

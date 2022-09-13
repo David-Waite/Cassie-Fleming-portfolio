@@ -67,17 +67,16 @@ const renderOptions = {
 
 export default function animation({ animations }) {
   let video;
+
   if (animations.fields.url) {
     console.log(animations.fields.url);
     video = (
-      <div>
-        <iframe
-          src={`https://www.youtube.com/embed/s_t5Mxjd03o`}
-          frameBorder="0"
-          allowFullScreen
-          title="Embedded youtube"
-        />
-      </div>
+      <iframe
+        src={`https://www.youtube.com/embed/qlMWGjTkeuA`}
+        frameBorder="0"
+        allowFullScreen
+        title="Embedded youtube"
+      />
     );
   } else {
     const src = `https:${animations.fields.gif.fields.file.url}`;
