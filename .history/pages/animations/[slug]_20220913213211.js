@@ -69,11 +69,10 @@ export default function animation({ animations }) {
   let video;
   if (animations.fields.url) {
     console.log(animations.fields.url);
-    const url = `https://www.youtube.com/embed/${animations.fields.url}`;
     video = (
       <div>
         <iframe
-          src={{ url }}
+          src={`https://www.youtube.com/embed/s_t5Mxjd03o`}
           frameBorder="0"
           allowFullScreen
           title="Embedded youtube"
