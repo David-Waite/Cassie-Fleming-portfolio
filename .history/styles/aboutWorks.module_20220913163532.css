@@ -1,0 +1,13 @@
+.layout {
+  max-width: 1000px;
+}
+.backLink {
+  display: none;
+}
+@media (max-width: 810px) {
+  .backLink {
+    display: block;
+    text-align: left;
+    margin: -16px 0 18px;
+  }
+}

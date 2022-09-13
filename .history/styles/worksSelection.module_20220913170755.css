@@ -1,0 +1,42 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.layout div {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: green;
+  z-index: 1;
+}
+
+.photo {
+  height: 100%;
+  object-fit: contain;
+}
