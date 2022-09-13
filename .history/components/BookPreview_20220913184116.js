@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function bookPreview(props) {
   const { src, height, width, alt, slug } = props;
 
-  return slug ? (
+  const bookPreviewElement = slug ? (
     <Link href={slug ? slug : ""}>
       <a>
         <Image src={`https:${src}`} height={height} width={width} alt={alt} />
@@ -19,4 +19,6 @@ export default function bookPreview(props) {
   ) : (
     <Image src={`https:${src}`} height={height} width={width} alt={alt} />
   );
+
+  return { bookPreviewElement };
 }

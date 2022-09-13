@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function bookPreview(props) {
   const { src, height, width, alt, slug } = props;
 
-  return slug ? (
+  return (
     <Link href={slug ? slug : ""}>
-      <a>
+      <a className={slug ? "" : "noSlug"}>
         <Image src={`https:${src}`} height={height} width={width} alt={alt} />
         <style jsx>{`
           .container {
@@ -16,7 +16,5 @@ export default function bookPreview(props) {
         `}</style>
       </a>
     </Link>
-  ) : (
-    <Image src={`https:${src}`} height={height} width={width} alt={alt} />
   );
 }
