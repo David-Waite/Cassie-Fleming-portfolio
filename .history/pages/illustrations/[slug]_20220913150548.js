@@ -13,7 +13,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
   });
 
   const paths = res.items.map((item) => {
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "animation",
+    content_type: "illustrations",
     "fields.slug": params.slug,
   });
 
@@ -44,7 +44,8 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { animations: items[0] },
+    props: { illustrations: items[0] },
+    revalidate: 300,
   };
 };
 
@@ -52,7 +53,7 @@ const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       return (
-        <div>
+        <div className={styles.photos}>
           <img
             src={`https://${node.data.target.fields.file.url}`}
             height={node.data.target.fields.file.details.image.height}
@@ -65,41 +66,26 @@ const renderOptions = {
   },
 };
 
-export default function animation({ animations }) {
-  let video;
-  if (animations.fields.url) {
-    video = (
-      <div>
-        <iframe
-          src={`https:${animations.fields.url}`}
-          frameBorder="0"
-          allowFullScreen
-          title="Embedded youtube"
-        />
-      </div>
-    );
-  } else {
-    const src = `https:${animations.fields.gif.fields.file.url}`;
-    const width = animations.fields.gif.fields.file.details.image.width;
-    const height = animations.fields.gif.fields.file.details.image.height;
-    const title = animations.fields.title;
-    video = <Image src={src} height={height} width={width} alt={title} />;
-  }
+export default function illustration({ illustrations }) {
+  const url = illustrations.fields.illustration.fields.file.url;
+  const width =
+    illustrations.fields.illustration.fields.file.details.image.width;
+  const height =
+    illustrations.fields.illustration.fields.file.details.image.height;
 
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>
-        <Link href="/animations">
+        <Link href="/illustrations">
           <a>
             <ArrowLeft />
           </a>
         </Link>
       </div>
-      <div>{video}</div>
-
+      <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(
-          animations.fields.description,
+          illustrations.fields.description,
           renderOptions
         )}
       </div>
