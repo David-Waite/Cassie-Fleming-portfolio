@@ -98,14 +98,14 @@ export default function Layout({ children }) {
               Personal works
             </a>
           </Link>
-          <Link href="/characterDesign">
+          <Link href="/personal-works">
             <a
               onClick={newPage}
               className={`${
-                currentRoute === "/characterDesign" ? "active" : ""
+                currentRoute === "/personalWorks" ? "active" : ""
               } ${navState.linkClass}`}
             >
-              Character design
+              Personal works
             </a>
           </Link>
           <Link href="/showreel">

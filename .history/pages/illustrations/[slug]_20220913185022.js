@@ -66,10 +66,11 @@ const renderOptions = {
 };
 
 export default function illustration({ illustrations }) {
-  const url = illustrations.fields.thumbnail.fields.file.url;
-  const width = illustrations.fields.thumbnail.fields.file.details.image.width;
+  const url = illustrations.fields.illustration.fields.file.url;
+  const width =
+    illustrations.fields.illustration.fields.file.details.image.width;
   const height =
-    illustrations.fields.thumbnail.fields.file.details.image.height;
+    illustrations.fields.illustration.fields.file.details.image.height;
 
   return (
     <div className={styles.layout}>

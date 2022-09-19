@@ -49,7 +49,7 @@ a {
 nav a {
   color: #727272;
   font-size: 16px;
-  margin: 15px;
+  margin: 8px;
 }
 
 a:hover {
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .navbar-line {
-  width: 650px;
+  width: 568px;
   background-color: #727272;
   margin: 20px 0 60px;
 }

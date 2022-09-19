@@ -98,7 +98,7 @@ export default function Layout({ children }) {
               Personal works
             </a>
           </Link>
-          <Link href="/characterDesign">
+          <Link href="/personal-works">
             <a
               onClick={newPage}
               className={`${
