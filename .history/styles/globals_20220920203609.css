@@ -276,7 +276,6 @@ footer {
     z-index: 3;
     width: calc(100vw);
     margin-bottom: 10px;
-    margin-left: -20px;
   }
   .navbarLineFull {
     display: none;

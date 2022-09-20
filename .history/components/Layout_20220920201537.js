@@ -121,7 +121,7 @@ export default function Layout({ children }) {
           <hr className="navbar-line navbarLineFull" />
         </nav>
       </header>
-      <hr className="navbar-line navbarLineMobile" />
+      <hr className="navbar-line navbarLineMoble" />
 
       <div className="currentPageCon">
         <h2 className="currentPage">

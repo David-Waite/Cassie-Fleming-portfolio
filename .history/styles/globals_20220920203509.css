@@ -240,7 +240,7 @@ footer {
   /* nav hidden by default*/
   nav {
     position: absolute;
-    top: 61px;
+    top: 50px;
     width: calc(100vw);
     margin-left: -10px;
     height: 0px;
@@ -274,9 +274,8 @@ footer {
     position: sticky;
     top: 60px;
     z-index: 3;
-    width: calc(100vw);
+    width: calc(100vw - 60px);
     margin-bottom: 10px;
-    margin-left: -20px;
   }
   .navbarLineFull {
     display: none;

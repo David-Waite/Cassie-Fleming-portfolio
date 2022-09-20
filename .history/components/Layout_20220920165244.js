@@ -118,10 +118,9 @@ export default function Layout({ children }) {
               Showreel
             </a>
           </Link>
-          <hr className="navbar-line navbarLineFull" />
+          <hr className="navbar-line" />
         </nav>
       </header>
-      <hr className="navbar-line navbarLineMobile" />
 
       <div className="currentPageCon">
         <h2 className="currentPage">
