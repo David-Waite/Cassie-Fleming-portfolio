@@ -13,7 +13,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "characterDesign",
+    content_type: "illustrations",
   });
 
   const paths = res.items.map((item) => {
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "characterDesign",
+    content_type: "illustrations",
     "fields.slug": params.slug,
   });
 
@@ -44,7 +44,7 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { characterDesigns: items[0] },
+    props: { illustrations: items[0] },
   };
 };
 
@@ -52,7 +52,7 @@ const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       return (
-        <div>
+        <div className={styles.photos}>
           <img
             src={`https://${node.data.target.fields.file.url}`}
             height={node.data.target.fields.file.details.image.height}
@@ -65,28 +65,21 @@ const renderOptions = {
   },
 };
 
-export default function characterDesign({ characterDesigns }) {
-  console.log(characterDesigns.fields.title);
+export default function illustration({ illustrations }) {
+  const url = illustrations.fields.thumbnail.fields.file.url;
+  const width = illustrations.fields.thumbnail.fields.file.details.image.width;
+  const height =
+    illustrations.fields.thumbnail.fields.file.details.image.height;
+
   return (
     <div className={styles.layout}>
       <div className={styles.pageName}>
         <p className={styles.layout}>{characterDesigns.fields.title}</p>
       </div>
-
-      <Image
-        src={`https:${characterDesigns.fields.thumbnail.fields.file.url}`}
-        width={
-          characterDesigns.fields.thumbnail.fields.file.details.image.width
-        }
-        height={
-          characterDesigns.fields.thumbnail.fields.file.details.image.height
-        }
-        alt={characterDesigns.fields.title}
-      />
-
+      <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(
-          characterDesigns.fields.description,
+          illustrations.fields.description,
           renderOptions
         )}
       </div>

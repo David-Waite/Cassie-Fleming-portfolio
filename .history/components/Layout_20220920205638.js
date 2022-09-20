@@ -135,8 +135,6 @@ export default function Layout({ children }) {
             ? "Showreel"
             : currentRoute === "/personal-works"
             ? "Personal works"
-            : currentRoute === "/characterDesigns"
-            ? "Character design"
             : ""}
         </h2>
       </div>

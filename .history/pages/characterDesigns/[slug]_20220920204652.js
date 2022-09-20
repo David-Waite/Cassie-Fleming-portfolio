@@ -66,11 +66,15 @@ const renderOptions = {
 };
 
 export default function characterDesign({ characterDesigns }) {
-  console.log(characterDesigns.fields.title);
   return (
     <div className={styles.layout}>
-      <div className={styles.pageName}>
-        <p className={styles.layout}>{characterDesigns.fields.title}</p>
+      <div className={styles.backLink}>
+        <Link href="/characterDesign">
+          <a>
+            <ArrowLeft />
+          </a>
+        </Link>
+        <h2>hi</h2>
       </div>
 
       <Image

@@ -69,7 +69,7 @@ export default function characterDesign({ characterDesigns }) {
   console.log(characterDesigns.fields.title);
   return (
     <div className={styles.layout}>
-      <div className={styles.pageName}>
+      <div>
         <p className={styles.layout}>{characterDesigns.fields.title}</p>
       </div>
 

@@ -1,0 +1,16 @@
+.layout {
+  max-width: 1000px;
+}
+.pageName {
+  display: none;
+}
+
+@media (max-width: 810px) {
+  .pageName {
+    text-align: start;
+    margin: 30px 0 20px 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}

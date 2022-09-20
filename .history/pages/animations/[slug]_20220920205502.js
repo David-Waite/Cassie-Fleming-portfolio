@@ -13,7 +13,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "characterDesign",
+    content_type: "animation",
   });
 
   const paths = res.items.map((item) => {
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "characterDesign",
+    content_type: "animation",
     "fields.slug": params.slug,
   });
 
@@ -44,7 +44,7 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { characterDesigns: items[0] },
+    props: { animations: items[0] },
   };
 };
 
@@ -65,28 +65,43 @@ const renderOptions = {
   },
 };
 
-export default function characterDesign({ characterDesigns }) {
-  console.log(characterDesigns.fields.title);
+export default function animation({ animations }) {
+  let video;
+  if (animations.fields.url) {
+    console.log(animations.fields.url);
+    const url = `https://www.youtube.com/embed/${animations.fields.url}`;
+    video = (
+      <div>
+        <iframe
+          src={url}
+          frameBorder="0"
+          allowFullScreen
+          title="Embedded youtube"
+        />
+      </div>
+    );
+  } else {
+    const src = `https:${animations.fields.gif.fields.file.url}`;
+    const width = animations.fields.gif.fields.file.details.image.width;
+    const height = animations.fields.gif.fields.file.details.image.height;
+    const title = animations.fields.title;
+    video = <Image src={src} height={height} width={width} alt={title} />;
+  }
+
   return (
     <div className={styles.layout}>
-      <div className={styles.pageName}>
-        <p className={styles.layout}>{characterDesigns.fields.title}</p>
+      <div className={styles.backLink}>
+        <Link href="/animations">
+          <a>
+            <ArrowLeft />
+          </a>
+        </Link>
       </div>
-
-      <Image
-        src={`https:${characterDesigns.fields.thumbnail.fields.file.url}`}
-        width={
-          characterDesigns.fields.thumbnail.fields.file.details.image.width
-        }
-        height={
-          characterDesigns.fields.thumbnail.fields.file.details.image.height
-        }
-        alt={characterDesigns.fields.title}
-      />
+      <div>{video}</div>
 
       <div>
         {documentToReactComponents(
-          characterDesigns.fields.description,
+          animations.fields.description,
           renderOptions
         )}
       </div>
