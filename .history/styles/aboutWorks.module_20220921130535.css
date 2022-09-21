@@ -3,10 +3,11 @@
 }
 .backLink {
   display: none;
+  display: flex;
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 @media (max-width: 810px) {
   .backLink {

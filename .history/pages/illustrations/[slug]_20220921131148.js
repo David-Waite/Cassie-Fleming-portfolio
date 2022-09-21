@@ -74,13 +74,13 @@ export default function illustration({ illustrations }) {
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>
-        <Link href="/illustrations">
+        <Link href="/animations">
           <a>
             <ArrowLeft />
           </a>
         </Link>
       </div>
-      <h2 className={styles.title}>{illustrations.fields.title}</h2>
+      <h2 className={styles.title}>{animations.fields.title}</h2>
       <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(

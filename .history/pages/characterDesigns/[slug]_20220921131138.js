@@ -13,7 +13,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "illustrations",
+    content_type: "characterDesign",
   });
 
   const paths = res.items.map((item) => {
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "illustrations",
+    content_type: "characterDesign",
     "fields.slug": params.slug,
   });
 
@@ -44,7 +44,7 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { illustrations: items[0] },
+    props: { characterDesigns: items[0] },
   };
 };
 
@@ -52,7 +52,7 @@ const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       return (
-        <div className={styles.photos}>
+        <div>
           <img
             src={`https://${node.data.target.fields.file.url}`}
             height={node.data.target.fields.file.details.image.height}
@@ -65,26 +65,33 @@ const renderOptions = {
   },
 };
 
-export default function illustration({ illustrations }) {
-  const url = illustrations.fields.thumbnail.fields.file.url;
-  const width = illustrations.fields.thumbnail.fields.file.details.image.width;
-  const height =
-    illustrations.fields.thumbnail.fields.file.details.image.height;
-
+export default function characterDesign({ characterDesigns }) {
+  console.log(characterDesigns.fields.title);
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>
-        <Link href="/illustrations">
+        <Link href="/animations">
           <a>
             <ArrowLeft />
           </a>
         </Link>
       </div>
-      <h2 className={styles.title}>{illustrations.fields.title}</h2>
-      <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
+      <h2 className={styles.title}>{animations.fields.title}</h2>
+
+      <Image
+        src={`https:${characterDesigns.fields.thumbnail.fields.file.url}`}
+        width={
+          characterDesigns.fields.thumbnail.fields.file.details.image.width
+        }
+        height={
+          characterDesigns.fields.thumbnail.fields.file.details.image.height
+        }
+        alt={characterDesigns.fields.title}
+      />
+
       <div>
         {documentToReactComponents(
-          illustrations.fields.description,
+          characterDesigns.fields.description,
           renderOptions
         )}
       </div>

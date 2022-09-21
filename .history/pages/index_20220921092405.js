@@ -10,8 +10,8 @@ export default function Home() {
           <Image
             className={styles.photo}
             src="/Cassie.png"
-            height={300}
-            width={300}
+            height={100}
+            width={100}
             alt="Photo of me, Cassie Fleming"
           />
         </div>

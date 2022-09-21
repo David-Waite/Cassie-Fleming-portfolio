@@ -3,14 +3,15 @@
 }
 .backLink {
   display: none;
+  display: flex;
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 @media (max-width: 810px) {
   .backLink {
-    display: block;
+    display: flex;
     text-align: left;
     margin: -19px 0 0px 20px;
     color: #727272;

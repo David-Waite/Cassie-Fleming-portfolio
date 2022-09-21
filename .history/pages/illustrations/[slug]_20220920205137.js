@@ -73,14 +73,9 @@ export default function illustration({ illustrations }) {
 
   return (
     <div className={styles.layout}>
-      <div className={styles.backLink}>
-        <Link href="/illustrations">
-          <a>
-            <ArrowLeft />
-          </a>
-        </Link>
+      <div className={styles.pageName}>
+        <p className={styles.layout}>{illustrations.fields.title}</p>
       </div>
-      <h2 className={styles.title}>{illustrations.fields.title}</h2>
       <Image src={`https:${url}`} height={height} width={width} alt="yeet" />
       <div>
         {documentToReactComponents(
