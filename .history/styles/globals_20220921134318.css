@@ -241,7 +241,7 @@ footer {
   nav {
     position: absolute;
     top: 61px;
-    width: calc(100vw - 9px);
+    width: calc(100vw - 8px);
     margin-left: -10px;
     height: 0px;
     transition: 0.5s;

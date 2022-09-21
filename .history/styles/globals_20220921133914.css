@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;500;700&display=swap");
 
 /* general layout */
 * {
@@ -241,7 +241,7 @@ footer {
   nav {
     position: absolute;
     top: 61px;
-    width: calc(100vw - 9px);
+    width: calc(100vw);
     margin-left: -10px;
     height: 0px;
     transition: 0.5s;
