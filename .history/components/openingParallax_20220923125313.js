@@ -20,11 +20,12 @@ export default function OpeningParallax() {
           <ParallaxLayer speed={0.4}>
             <img src="/foreground2.png" alt="" />
           </ParallaxLayer>
-          <ParallaxLayer offset={0.5} speed={-1.5}>
-            <h1>Cassie Fleming</h1>
-          </ParallaxLayer>
+
           <ParallaxLayer speed={0.4}>
             <img src="foreground.png" alt="" />
+          </ParallaxLayer>
+          <ParallaxLayer offset={0.5} speed={-1.5}>
+            <h1>Cassie Fleming</h1>
           </ParallaxLayer>
         </Parallax>
       </div>

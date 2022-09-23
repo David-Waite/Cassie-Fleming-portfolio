@@ -26,19 +26,22 @@ export default function Home() {
         </div>
       </div>
 
-      <p className={styles.aboutText}>
+      <div className={styles.aboutText}>
         Hi!
         <br />
         <br />
-        My name is Cassie Fleming. I&apos;m a junior animator and illustrator
-        from Melbourne, Australia. Currently in my last year of a Bachelor of
-        Animation at Swinburne University of Technology.
+        My name is Cassie Fleming. I'm a junior animator and illustrator from
+        Melbourne, Australia. Currently in my last year of a Bachelor of
+        Animation at Swinburne University of Technology. My name is Cassie
+        Fleming. I&apos;m a junior animator and illustrator from Melbourne,
+        Australia. Currently in my last year of a Bachelors of Animation at
+        Swinburne University of Technology.
         <br />
-        <br /> I have been an artist all my life, with a wide range of skills
-        such as pencil, charcoal, pastel, and acrylic paint. In 2018 I started
-        to teach myself digital art and animation. Now in 2022, I have a love
-        for 2D animation, with skills in toon boom harmony.
-      </p>
+        <br /> I have been an artist all my life, with a wide range in skills
+        such as pencil, charcoal, pastel and acrylic paint. In 2018 I started to
+        teach myself digital art and animation. Now in 2022 I have a love for 2D
+        animation, with skills in toon boom harmony.
+      </div>
       <div className={styles.photoContainer}>
         <div className={styles.photo}>
           <Image

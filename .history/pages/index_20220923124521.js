@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className={styles.aboutText}>
+      <div className={styles.aboutText}>
         Hi!
         <br />
         <br />
@@ -38,7 +38,7 @@ export default function Home() {
         such as pencil, charcoal, pastel, and acrylic paint. In 2018 I started
         to teach myself digital art and animation. Now in 2022, I have a love
         for 2D animation, with skills in toon boom harmony.
-      </p>
+      </div>
       <div className={styles.photoContainer}>
         <div className={styles.photo}>
           <Image
