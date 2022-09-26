@@ -49,9 +49,9 @@ export default function Home() {
             alt="glowing fox"
           />
         </div>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={`${styles.photo}${styles.photoBottom}`}>
           <Image
-            className={`${styles.photo}`}
+            className={`${styles.photo} ${styles.photoBottom}`}
             src="/Inkedhuman.jpg"
             height={930}
             width={1211}

@@ -331,19 +331,6 @@ footer {
   }
 
   .duck {
-    width: 100px;
-    top: 0px;
-    right: 0px;
-  }
-  .quackOn {
-    width: 200px;
-    right: -1px;
-    top: -38px;
-  }
-}
-
-@media (max-width: 500px) {
-  .duck {
     width: 70px;
     top: 15px;
     right: -10px;
@@ -356,6 +343,19 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  .duck {
+    width: 100px;
+    top: 0px;
+    right: 0px;
+  }
+  .quackOn {
+    width: 200px;
+
+    right: -1px;
+    top: -38px;
+  }
+}
 /* iframe layout, to match all image containers */
 iframe {
   width: 1000px;

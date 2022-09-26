@@ -356,6 +356,15 @@ footer {
   }
 }
 
+.photoBottom {
+  display: none;
+}
+@media (max-height: 1000px) {
+  .photoBottom {
+    display: none;
+  }
+}
+
 /* iframe layout, to match all image containers */
 iframe {
   width: 1000px;

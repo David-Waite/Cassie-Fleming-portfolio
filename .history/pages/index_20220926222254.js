@@ -15,7 +15,7 @@ export default function Home() {
             alt="Photo of me, Cassie Fleming"
           />
         </div>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={styles.photo}>
           <Image
             className={styles.photo}
             src="/cherry blossom.2.jpg"
@@ -49,9 +49,9 @@ export default function Home() {
             alt="glowing fox"
           />
         </div>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={`${styles.photo}${styles.photoBottom}`}>
           <Image
-            className={`${styles.photo}`}
+            className={styles.photo}
             src="/Inkedhuman.jpg"
             height={930}
             width={1211}

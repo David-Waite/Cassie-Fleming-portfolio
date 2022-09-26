@@ -51,7 +51,6 @@ export default function Home() {
         </div>
         <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
-            className={`${styles.photo}`}
             src="/Inkedhuman.jpg"
             height={930}
             width={1211}
