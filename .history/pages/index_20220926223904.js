@@ -18,10 +18,10 @@ export default function Home() {
         <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
             className={styles.photo}
-            src="/fox.png"
-            height={1080}
-            width={1920}
-            alt="glowing fox"
+            src="/cherry blossom.2.jpg"
+            height={725}
+            width={1200}
+            alt="Cherry Blossom covered fox, taking a nap in a hollowed tree log, by the river"
           />
         </div>
       </div>
@@ -40,7 +40,7 @@ export default function Home() {
         for 2D animation, with skills in toon boom harmony.
       </p>
       <div className={styles.photoContainer}>
-        <div className={`${styles.photo}`}>
+        <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
             className={styles.photo}
             src="/cherry blossom.2.jpg"

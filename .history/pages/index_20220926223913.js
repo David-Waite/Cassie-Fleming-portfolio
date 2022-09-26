@@ -15,7 +15,7 @@ export default function Home() {
             alt="Photo of me, Cassie Fleming"
           />
         </div>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={styles.photo}>
           <Image
             className={styles.photo}
             src="/fox.png"
@@ -40,7 +40,7 @@ export default function Home() {
         for 2D animation, with skills in toon boom harmony.
       </p>
       <div className={styles.photoContainer}>
-        <div className={`${styles.photo}`}>
+        <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
             className={styles.photo}
             src="/cherry blossom.2.jpg"

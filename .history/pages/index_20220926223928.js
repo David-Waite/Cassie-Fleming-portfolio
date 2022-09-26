@@ -15,7 +15,7 @@ export default function Home() {
             alt="Photo of me, Cassie Fleming"
           />
         </div>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={styles.photo}>
           <Image
             className={styles.photo}
             src="/fox.png"
