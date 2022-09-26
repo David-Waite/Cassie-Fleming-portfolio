@@ -65,30 +65,7 @@ export default function Layout({ children }) {
   }
 
   const duckElement = () => {
-    if (
-      currentRoute === "/" ||
-      currentRoute === "/showreel" ||
-      currentRoute === "/animations" ||
-      currentRoute === "/illustrations" ||
-      currentRoute === "/personal-works" ||
-      currentRoute === "/characterDesigns"
-    ) {
-      return (
-        <div>
-          <img
-            onClick={duckClick}
-            className="duck"
-            src={duckQuacking ? "/duckQuacking.gif" : "duckBlinking.gif"}
-            alt=""
-          />
-          <img
-            className={`${duckSpeachBubble ? "quackOn" : "quackOff"}`}
-            src="/quack.png"
-            alt=""
-          />
-        </div>
-      );
-    }
+    return <div>hello</div>;
   };
 
   return (

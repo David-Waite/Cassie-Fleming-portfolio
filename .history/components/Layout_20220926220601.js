@@ -65,14 +65,7 @@ export default function Layout({ children }) {
   }
 
   const duckElement = () => {
-    if (
-      currentRoute === "/" ||
-      currentRoute === "/showreel" ||
-      currentRoute === "/animations" ||
-      currentRoute === "/illustrations" ||
-      currentRoute === "/personal-works" ||
-      currentRoute === "/characterDesigns"
-    ) {
+    if (currentRoute === "/") {
       return (
         <div>
           <img

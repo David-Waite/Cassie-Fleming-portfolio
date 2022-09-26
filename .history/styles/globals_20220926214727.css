@@ -319,14 +319,14 @@ footer {
   }
   .duck {
     width: 100px;
-    top: 0px;
+    top: 30px;
     right: 0px;
   }
   .quackOn {
     width: 200px;
     z-index: 1;
     right: -1px;
-    top: -38px;
+    top: -3px;
   }
 }
 

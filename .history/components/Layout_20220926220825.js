@@ -70,8 +70,8 @@ export default function Layout({ children }) {
       currentRoute === "/showreel" ||
       currentRoute === "/animations" ||
       currentRoute === "/illustrations" ||
-      currentRoute === "/personal-works" ||
-      currentRoute === "/characterDesigns"
+      currentRoute === "/personalWorks" ||
+      currentRoute === "/characterDesign"
     ) {
       return (
         <div>

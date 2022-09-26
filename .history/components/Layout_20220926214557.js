@@ -11,8 +11,8 @@ export default function Layout({ children }) {
     linkClass: "link",
   });
   const [copiedEmailState, setCopiedEmailState] = useState("hidden");
-  const [duckQuacking, setDuckQuacking] = useState(false);
-  const [duckSpeachBubble, setDuckSpeachBubble] = useState(false);
+  const [duckQuacking, setDuckQuacking] = useState(true);
+  const [duckSpeachBubble, setDuckSpeachBubble] = useState(true);
   const router = useRouter();
   const currentRoute = router.pathname;
 
@@ -63,33 +63,6 @@ export default function Layout({ children }) {
       }, [1280]);
     }
   }
-
-  const duckElement = () => {
-    if (
-      currentRoute === "/" ||
-      currentRoute === "/showreel" ||
-      currentRoute === "/animations" ||
-      currentRoute === "/illustrations" ||
-      currentRoute === "/personal-works" ||
-      currentRoute === "/characterDesigns"
-    ) {
-      return (
-        <div>
-          <img
-            onClick={duckClick}
-            className="duck"
-            src={duckQuacking ? "/duckQuacking.gif" : "duckBlinking.gif"}
-            alt=""
-          />
-          <img
-            className={`${duckSpeachBubble ? "quackOn" : "quackOff"}`}
-            src="/quack.png"
-            alt=""
-          />
-        </div>
-      );
-    }
-  };
 
   return (
     <div>
@@ -221,7 +194,19 @@ export default function Layout({ children }) {
               </Link>
             </div>
           </div>
-          {duckElement()}
+          <div>
+            <img
+              onClick={duckClick}
+              className="duck"
+              src={duckQuacking ? "/duckQuacking.gif" : "duckBlinking.gif"}
+              alt=""
+            />
+            <img
+              className={`${duckSpeachBubble ? "quackOn" : "quackOff"}`}
+              src="/quack.png"
+              alt=""
+            />
+          </div>
         </footer>
       </div>
     </div>
