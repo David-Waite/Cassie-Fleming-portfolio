@@ -66,7 +66,6 @@ const renderOptions = {
 };
 
 export default function characterDesign({ characterDesigns }) {
-  console.log(characterDesigns.fields.title);
   return (
     <div className={styles.layout}>
       <div className={styles.backLink}>

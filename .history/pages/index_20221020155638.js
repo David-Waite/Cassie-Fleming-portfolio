@@ -36,9 +36,11 @@ export default function Home() {
         <br /> Specializing in 2D animation with skills in Toon Boom Harmony,
         and book illustrating. Through a strong commitment to teamwork, learning
         new skills, and pure joy for the work, I aim to develop memorable and
-        inspiring stories with entertaining visuals. <br />
-        <br />I am currently about to complete a Bachelor of Animation at the
-        Swinburne University of Technology.
+        inspiring stories with entertaining visuals. I am currently about to
+        complete a Bachelor of Animation at the Swinburne University of
+        Technology. Hi!
+        <br />
+        <br />
       </p>
       <div className={styles.photoContainer}>
         <div className={`${styles.photo}`}>

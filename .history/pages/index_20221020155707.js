@@ -31,13 +31,11 @@ export default function Home() {
         <br />
         <br />
         My name is Cassie Fleming. I&apos;m a 21-year-old junior animator and
-        illustrator from Melbourne, Australia.
-        <br />
-        <br /> Specializing in 2D animation with skills in Toon Boom Harmony,
-        and book illustrating. Through a strong commitment to teamwork, learning
-        new skills, and pure joy for the work, I aim to develop memorable and
-        inspiring stories with entertaining visuals. <br />
-        <br />I am currently about to complete a Bachelor of Animation at the
+        illustrator from Melbourne, Australia. \Specializing in 2D animation
+        with skills in Toon Boom Harmony, and book illustrating. Through a
+        strong commitment to teamwork, learning new skills, and pure joy for the
+        work, I aim to develop memorable and inspiring stories with entertaining
+        visuals. I am currently about to complete a Bachelor of Animation at the
         Swinburne University of Technology.
       </p>
       <div className={styles.photoContainer}>
