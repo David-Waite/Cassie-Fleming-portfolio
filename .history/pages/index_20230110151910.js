@@ -18,10 +18,10 @@ export default function Home() {
         <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
             className={styles.photo}
-            src="/cherry blossom.2.jpg"
-            height={725}
-            width={1200}
-            alt="Cherry Blossom covered fox, taking a nap in a hollowed tree log, by the river"
+            src="/fox.png"
+            height={1080}
+            width={1920}
+            alt="glowing fox"
           />
         </div>
       </div>
@@ -30,17 +30,26 @@ export default function Home() {
         Hi!
         <br />
         <br />
-        My name is Cassie Fleming. I&apos;m a junior animator and illustrator
-        from Melbourne, Australia. Currently in my last year of a Bachelor of
-        Animation at Swinburne University of Technology.
+        I'm Cassie, a freelance illustrator and 2D animator currently based in
+        Melbourne Australia with a Bachelors of Animation from Swinburne
+        University of technology. I specialize in 2D animation (Toon Boom
+        Harmony) with experience in illustrating children's books, designing
+        characters to match brands and worked as the lead animator on a short
+        student film called 'A Light Touch'. Hi!
         <br />
-        <br /> I have been an artist all my life, with a wide range of skills
-        such as pencil, charcoal, pastel, and acrylic paint. In 2018 I started
-        to teach myself digital art and animation. Now in 2022, I have a love
-        for 2D animation, with skills in toon boom harmony.
+        <br />
+        My name is Cassie Fleming. I&apos;m a 21-year-old junior animator and
+        illustrator from Melbourne, Australia.
+        <br />
+        <br /> Specializing in 2D animation with skills in Toon Boom Harmony,
+        and book illustrating. Through a strong commitment to teamwork, learning
+        new skills, and pure joy for the work, I aim to develop memorable and
+        inspiring stories with entertaining visuals. <br />
+        <br />I am currently about to complete a Bachelor of Animation at the
+        Swinburne University of Technology.
       </p>
       <div className={styles.photoContainer}>
-        <div className={`${styles.photo} ${styles.photoBottom}`}>
+        <div className={`${styles.photo}`}>
           <Image
             className={styles.photo}
             src="/cherry blossom.2.jpg"

@@ -18,40 +18,37 @@ export default function Home() {
         <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
             className={styles.photo}
-            src="/cherry blossom.2.jpg"
-            height={725}
-            width={1200}
-            alt="Cherry Blossom covered fox, taking a nap in a hollowed tree log, by the river"
-          />
-        </div>
-      </div>
-
-      <p className={styles.aboutText}>
-        Hi!
-        <br />
-        <br />
-        My name is Cassie Fleming. I&apos;m a junior animator and illustrator
-        from Melbourne, Australia. Currently in my last year of a Bachelor of
-        Animation at Swinburne University of Technology.
-        <br />
-        <br /> I have been an artist all my life, with a wide range of skills
-        such as pencil, charcoal, pastel, and acrylic paint. In 2018 I started
-        to teach myself digital art and animation. Now in 2022, I have a love
-        for 2D animation, with skills in toon boom harmony.
-      </p>
-      <div className={styles.photoContainer}>
-        <div className={styles.photo}>
-          <Image
-            className={styles.photo}
             src="/fox.png"
             height={1080}
             width={1920}
             alt="glowing fox"
           />
         </div>
+      </div>
+
+      <p className={styles.aboutText}>
+        Hi! I&apos;m Cassie, a freelance illustrator and 2D animator currently
+        based in Melbourne Australia with a Bachelors of Animation from
+        Swinburne University of technology. <br />
+        <br /> I specialize in 2D animation (Toon Boom Harmony) with experience
+        in illustrating children&apos;s books, designing characters to match
+        brands and worked as the lead animator on a short student film called 'A
+        Light Touch&apos;.
+      </p>
+      <div className={styles.photoContainer}>
+        <div className={`${styles.photo}`}>
+          <Image
+            className={styles.photo}
+            src="/cherry blossom.2.jpg"
+            height={725}
+            width={1200}
+            alt="Cherry Blossom covered fox, taking a nap in a hollowed tree log, by the river"
+          />
+        </div>
+
         <div className={`${styles.photo} ${styles.photoBottom}`}>
           <Image
-            className={`${styles.photo} ${styles.photoBottom}`}
+            className={`${styles.photo}`}
             src="/Inkedhuman.jpg"
             height={930}
             width={1211}

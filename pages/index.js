@@ -27,18 +27,13 @@ export default function Home() {
       </div>
 
       <p className={styles.aboutText}>
-        Hi!
-        <br />
-        <br />
-        My name is Cassie Fleming. I&apos;m a 21-year-old junior animator and
-        illustrator from Melbourne, Australia.
-        <br />
-        <br /> Specializing in 2D animation with skills in Toon Boom Harmony,
-        and book illustrating. Through a strong commitment to teamwork, learning
-        new skills, and pure joy for the work, I aim to develop memorable and
-        inspiring stories with entertaining visuals. <br />
-        <br />I am currently about to complete a Bachelor of Animation at the
-        Swinburne University of Technology.
+        Hi! I&apos;m Cassie, a freelance illustrator and 2D animator currently
+        based in Melbourne Australia with a Bachelors of Animation from
+        Swinburne University of technology. <br />
+        <br /> I specialize in 2D animation (Toon Boom Harmony) with experience
+        in illustrating children&apos;s books, designing characters to match
+        brands and worked as the lead animator on a short student film called
+        &apos;A Light Touch&apos;.
       </p>
       <div className={styles.photoContainer}>
         <div className={`${styles.photo}`}>
