@@ -4,12 +4,9 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <Analytics />
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
