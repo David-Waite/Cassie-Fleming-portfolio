@@ -440,6 +440,7 @@ export default function DisplayThumbnail(props) {
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
             }
             title={thumbnailArray[i].fields.title}
+          />nailArray[i].fields.title}
           />
         );
       }

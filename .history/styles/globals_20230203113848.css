@@ -63,6 +63,7 @@ nav a {
 
 a:hover {
   color: black;
+  font-weight: 600;
 }
 
 .active {

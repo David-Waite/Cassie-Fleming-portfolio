@@ -29,16 +29,11 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
             src={
               thumbnailArray[i].fields.gif
@@ -58,16 +53,11 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
             src={
               thumbnailArray[i].fields.gif
@@ -87,10 +77,7 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
               thumbnailArray[i].fields.gif
@@ -126,22 +113,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -155,22 +133,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -184,22 +153,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -223,22 +183,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -252,22 +203,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -281,22 +223,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -323,22 +256,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -352,22 +276,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -390,22 +305,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""
@@ -419,22 +325,13 @@ export default function DisplayThumbnail(props) {
           <BookPreview
             key={thumbnailArray[i].sys.id}
             width={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.width
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .width
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image.width
             }
             height={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.details.image.height
-                : thumbnailArray[i].fields.thumbnail.fields.file.details.image
-                    .height
+              thumbnailArray[i].fields.thumbnail.fields.file.details.image
+                .height
             }
-            src={
-              thumbnailArray[i].fields.gif
-                ? thumbnailArray[i].fields.gif.fields.file.url
-                : thumbnailArray[i].fields.thumbnail.fields.file.url
-            }
+            src={thumbnailArray[i].fields.thumbnail.fields.file.url}
             alt={thumbnailArray[i].fields.title}
             slug={
               slugName ? `/${slugName}/${thumbnailArray[i].fields.slug}` : ""

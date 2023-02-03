@@ -117,7 +117,16 @@ export default function Layout({ children }) {
                 Showreel
               </a>
             </Link>
-
+            <Link href="/characterDesigns">
+              <a
+                onClick={newPage}
+                className={`${
+                  currentRoute === "/characterDesign" ? "active" : ""
+                } ${navState.linkClass}`}
+              >
+                Character design
+              </a>
+            </Link>
             <Link href="/illustrations">
               <a
                 onClick={newPage}

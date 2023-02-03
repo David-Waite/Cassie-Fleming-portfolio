@@ -57,7 +57,7 @@ a {
 nav a {
   color: #727272;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 15px;
 }
 
@@ -67,7 +67,6 @@ a:hover {
 
 .active {
   color: black;
-  font-weight: 500;
 }
 
 .navbar-line {
