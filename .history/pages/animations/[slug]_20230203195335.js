@@ -67,11 +67,18 @@ const renderOptions = {
 
 export default function animation({ animations }) {
   let video;
+
   if (animations.fields.url) {
+    console.log(animations.fields.url);
+    let url = "";
+    animations.fields.isYoutube
+      ? (url = `https://www.youtube.com/embed/${animations.fields.url}`)
+      : (url = animation.fields.url);
+
     video = (
       <div>
         <iframe
-          src={animations.fields.url}
+          src={url}
           frameBorder="0"
           allowFullScreen
           title="vimeo-player"
