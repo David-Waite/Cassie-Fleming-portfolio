@@ -194,7 +194,7 @@ export default function Layout({ children }) {
           </p>
 
           <div className="social">
-            {/*
+            {
               <div className={`${navState.navClass}Icon`}>
                 <Link href="https://www.instagram.com/cass_illustrations/">
                   <a target="_blank">
@@ -202,7 +202,7 @@ export default function Layout({ children }) {
                   </a>
                 </Link>
               </div>
-              */}
+            }
             <div className={`${navState.navClass}Icon`} onClick={copyEmail}>
               <EnvelopeFill />
             </div>
