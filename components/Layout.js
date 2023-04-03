@@ -194,15 +194,15 @@ export default function Layout({ children }) {
           </p>
 
           <div className="social">
-            {/*
+            {
               <div className={`${navState.navClass}Icon`}>
-                <Link href="https://www.instagram.com/cass_illustrations/">
+                <Link href="https://instagram.com/cassie_illustration">
                   <a target="_blank">
-                    <Instagram /> 
+                    <Instagram />
                   </a>
                 </Link>
               </div>
-              */}
+            }
             <div className={`${navState.navClass}Icon`} onClick={copyEmail}>
               <EnvelopeFill />
             </div>

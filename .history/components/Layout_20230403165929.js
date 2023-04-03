@@ -117,16 +117,7 @@ export default function Layout({ children }) {
                 Showreel
               </a>
             </Link>
-            <Link href="/characterDesigns">
-              <a
-                onClick={newPage}
-                className={`${
-                  currentRoute === "/characterDesign" ? "active" : ""
-                } ${navState.linkClass}`}
-              >
-                Character design
-              </a>
-            </Link>
+
             <Link href="/illustrations">
               <a
                 onClick={newPage}
@@ -203,13 +194,16 @@ export default function Layout({ children }) {
           </p>
 
           <div className="social">
-            <div className={`${navState.navClass}Icon`}>
-              <Link href="https://www.instagram.com/cass_illustrations/">
-                <a target="_blank">
-                  <Instagram />
-                </a>
-              </Link>
-            </div>
+            {/*
+              <div className={`${navState.navClass}Icon`}>
+                <Link href="https://instagram.com/cassie_illustration?igshid=YmMyMTA2M2Y=">
+                  <a target="_blank">
+                    <Instagram /> 
+                    
+                  </a>
+                </Link>
+              </div>
+              */}
             <div className={`${navState.navClass}Icon`} onClick={copyEmail}>
               <EnvelopeFill />
             </div>

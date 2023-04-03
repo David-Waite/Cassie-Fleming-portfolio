@@ -1,7 +1,7 @@
-import Image from "next/image";
-import styles from "../styles/Illustrations.module.css";
+import styles from "../styles/worksSelection.module.css";
 import { createClient } from "contentful";
 import BookPreview from "../components/BookPreview";
+import DisplayThumbnail from "../components/DisplayThumbnail";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -13,16 +13,16 @@ export async function getStaticProps() {
 
   return {
     props: {
-      illustrations: res.items,
+      animations: res.items,
     },
   };
 }
 
-export default function Illustrations({ illustrations }) {
-  const illustrationsElements = illustrations.map((illustrations) => {
-    console.log(illustrations);
-    return <h1>hi</h1>;
-  });
-
-  return <div className={styles.layout}>{illustrationsElements}</div>;
+export default function Animations({ animations }) {
+  console.log(animations);
+  return (
+    <div className={styles.layout}>
+      <DisplayThumbnail thumbnailArray={animations} slugName="animations" />
+    </div>
+  );
 }

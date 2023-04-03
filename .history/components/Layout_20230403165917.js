@@ -107,26 +107,17 @@ export default function Layout({ children }) {
           </div>
 
           <nav>
-            <Link href="/showreel">
+            <Link href="/">
               <a
                 onClick={newPage}
-                className={`${currentRoute === "/showreel" ? "active" : ""} ${
+                className={`${currentRoute === "/" ? "active" : ""} ${
                   navState.linkClass
                 }`}
               >
                 Showreel
               </a>
             </Link>
-            <Link href="/characterDesigns">
-              <a
-                onClick={newPage}
-                className={`${
-                  currentRoute === "/characterDesign" ? "active" : ""
-                } ${navState.linkClass}`}
-              >
-                Character design
-              </a>
-            </Link>
+
             <Link href="/illustrations">
               <a
                 onClick={newPage}
@@ -158,10 +149,10 @@ export default function Layout({ children }) {
                 Personal works
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/about">
               <a
                 onClick={newPage}
-                className={`${currentRoute === "/" ? "active" : ""} ${
+                className={`${currentRoute === "/about" ? "active" : ""} ${
                   navState.linkClass
                 }`}
               >
@@ -203,18 +194,21 @@ export default function Layout({ children }) {
           </p>
 
           <div className="social">
-            <div className={`${navState.navClass}Icon`}>
-              <Link href="https://www.instagram.com/cass_illustrations/">
-                <a target="_blank">
-                  <Instagram />
-                </a>
-              </Link>
-            </div>
+            {/*
+              <div className={`${navState.navClass}Icon`}>
+                <Link href="https://www.instagram.com/cass_illustrations/">
+                  <a target="_blank">
+                    <Instagram /> 
+                    
+                  </a>
+                </Link>
+              </div>
+              */}
             <div className={`${navState.navClass}Icon`} onClick={copyEmail}>
               <EnvelopeFill />
             </div>
             <div className={`${navState.navClass}Icon`}>
-              <Link href="http://www.linkedin.com/in/cassie-fleming-500a56204">
+              <Link href="https://instagram.com/cassie_illustration?igshid=YmMyMTA2M2Y=">
                 <a target="_blank">
                   <Linkedin />
                 </a>

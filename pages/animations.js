@@ -19,6 +19,7 @@ export async function getStaticProps() {
 }
 
 export default function Animations({ animations }) {
+  console.log(animations);
   return (
     <div className={styles.layout}>
       <DisplayThumbnail thumbnailArray={animations} slugName="animations" />
