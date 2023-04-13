@@ -6,7 +6,7 @@ export default function YoutubeEmbed() {
       <Head>
         <title>Cassie Fleming | Showreel</title>
       </Head>
-      <div className="iframeLoader">
+      <div class="iframeLoader">
         <iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/817149627?h=13ea9c434e"
@@ -18,22 +18,7 @@ export default function YoutubeEmbed() {
       </div>
       <style jsx>{`
         .iframeLoader {
-          background: url(/iframeloadingImg.png);
-          height: calc((1000px / 16) * 9);
-          background-size: cover;
-        }
-        @media (max-width: 1200px) {
-          .iframeLoader {
-            width: 900px;
-            height: calc((900px / 16) * 9);
-          }
-        }
-
-        @media (max-width: 950px) {
-          .iframeLoader {
-            width: 95vw;
-            height: calc((95vw / 16) * 9);
-          }
+          background-color: blue;
         }
       `}</style>
     </div>

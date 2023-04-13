@@ -17,23 +17,12 @@ export default function YoutubeEmbed() {
         ></iframe>
       </div>
       <style jsx>{`
+        * {
+        }
         .iframeLoader {
+          margin-top: -100px;
           background: url(/iframeloadingImg.png);
-          height: calc((1000px / 16) * 9);
           background-size: cover;
-        }
-        @media (max-width: 1200px) {
-          .iframeLoader {
-            width: 900px;
-            height: calc((900px / 16) * 9);
-          }
-        }
-
-        @media (max-width: 950px) {
-          .iframeLoader {
-            width: 95vw;
-            height: calc((95vw / 16) * 9);
-          }
         }
       `}</style>
     </div>

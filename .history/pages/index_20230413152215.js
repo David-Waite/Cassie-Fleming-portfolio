@@ -23,14 +23,14 @@ export default function YoutubeEmbed() {
           background-size: cover;
         }
         @media (max-width: 1200px) {
-          .iframeLoader {
+          iframe {
             width: 900px;
             height: calc((900px / 16) * 9);
           }
         }
 
         @media (max-width: 950px) {
-          .iframeLoader {
+          iframe {
             width: 95vw;
             height: calc((95vw / 16) * 9);
           }

@@ -20,7 +20,7 @@ export default function Home() {
               width={300}
               alt="Photo of me, Cassie Fleming"
               blurDataURL="L7FYP#$*00D,P59Z9Z%10y%L~CtQ"
-              placeholder="blur"
+              placeholder="shimmer"
             />
           </div>
           <div className={`${styles.photo} ${styles.photoBottom}`}>

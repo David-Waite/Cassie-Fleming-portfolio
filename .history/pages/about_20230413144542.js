@@ -19,7 +19,6 @@ export default function Home() {
               height={300}
               width={300}
               alt="Photo of me, Cassie Fleming"
-              blurDataURL="L7FYP#$*00D,P59Z9Z%10y%L~CtQ"
               placeholder="blur"
             />
           </div>
@@ -30,6 +29,7 @@ export default function Home() {
               height={1080}
               width={1920}
               alt="glowing fox"
+              placeholder="blur"
             />
           </div>
         </div>
