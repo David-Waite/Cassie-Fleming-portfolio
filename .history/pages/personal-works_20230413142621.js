@@ -2,7 +2,6 @@ import styles from "../styles/worksSelection.module.css";
 import { createClient } from "contentful";
 import DisplayThumbnail from "../components/DisplayThumbnail";
 import React from "react";
-import Head from "next/head";
 
 export async function getStaticProps() {
   const client = createClient({

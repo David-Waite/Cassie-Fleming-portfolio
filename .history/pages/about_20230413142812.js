@@ -5,9 +5,6 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Cassie Fleming | About</title>
-      </Head>
       <div className={styles.layout}>
         <div
           className={`${styles.photoContainer} ${styles.photoContainerLeft}`}

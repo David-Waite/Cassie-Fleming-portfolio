@@ -1,7 +1,6 @@
 import styles from "../styles/worksSelection.module.css";
 import { createClient } from "contentful";
 import DisplayThumbnail from "../components/DisplayThumbnail";
-import React from "react";
 import Head from "next/head";
 
 export async function getStaticProps() {
@@ -10,24 +9,25 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "personalWorks" });
+  const res = await client.getEntries({ content_type: "animation" });
 
   return {
     props: {
-      personalWorks: res.items,
+      animations: res.items,
     },
   };
 }
 
-export default function PersonalWorks({ personalWorks }) {
+export default function Animations({ animations }) {
+  console.log(animations);
   return (
-    <div>
+    <>
       <Head>
-        <title>Cassie Fleming | Personal Works</title>
+        <title>Cassie Fleming | Animations</title>
       </Head>
       <div className={styles.layout}>
-        <DisplayThumbnail thumbnailArray={personalWorks} />
+        <DisplayThumbnail thumbnailArray={animations} slugName="animations" />
       </div>
-    </div>
+    </>
   );
 }

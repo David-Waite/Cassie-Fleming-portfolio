@@ -4,7 +4,7 @@ export default function YoutubeEmbed() {
   return (
     <div>
       <Head>
-        <title>Cassie Fleming | Showreel</title>
+        <title>Cassie Fleming</title>
       </Head>
       <iframe
         title="vimeo-player"

@@ -2,7 +2,6 @@ import styles from "../styles/worksSelection.module.css";
 import { createClient } from "contentful";
 import BookPreview from "../components/BookPreview";
 import DisplayThumbnail from "../components/DisplayThumbnail";
-import Head from "next/head";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -22,15 +21,15 @@ export async function getStaticProps() {
 export default function Illustrations({ illustrations }) {
   return (
     <>
-      <Head>
-        <title>Cassie Fleming | Illustrations</title>
-      </Head>
-      <div className={styles.layout}>
-        <DisplayThumbnail
-          thumbnailArray={illustrations}
-          slugName="illustrations"
-        />
-      </div>
-    </>
+     <Head>
+        <title>Cassie Fleming</title>
+      </Head></><div className={styles.layout}>
+      
+      <DisplayThumbnail
+        thumbnailArray={illustrations}
+        slugName="illustrations"
+      />
+    </div>
+    
   );
 }
